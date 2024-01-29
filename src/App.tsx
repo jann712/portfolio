@@ -1,4 +1,3 @@
-import ProjectCard from "./components/ProjectCard";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
@@ -57,35 +56,6 @@ function App() {
       <div className="text-center h-full w-full mb-5">
         <h3 className="text-3xl font-medium mb-12">Projetos</h3>
         <Projects />
-        {/* <div className="h-full w-full flex flex-col lg:flex-row lg:gap-1 lg:mb-16 ">
-          <ProjectCard
-            title="Website de Viagens"
-            websiteLink="https://www.spectaviagens.com"
-            desc="Website feito para uma empresa de turismo e viagens com envio de formulários."
-            tech={[
-              "JavaScript",
-              "React.js",
-              "Node.js",
-              "Express.js",
-              "Material UI",
-              "Hospedagem Cloud",
-            ]}
-          />
-          <ProjectCard
-            githubLink="https://github.com/jann712/climatempo-frontend/tree/main"
-            websiteLink="https://climatempo-frontend.onrender.com"
-            title="Previsão do tempo + cache"
-            desc="Uso da API do Climatempo para uma breve previsão do tempo junto com a função de cache via Redis."
-            tech={[
-              "Redis",
-              "React.js",
-              "Node.js",
-              "Express.js",
-              "TypeScript",
-              "TailwindCSS",
-            ]}
-          />
-        </div> */}
       </div>
       <div className="text-center h-96">
         <h3 className="text-3xl font-medium mb-6">Formas de contato</h3>
