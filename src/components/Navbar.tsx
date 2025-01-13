@@ -5,15 +5,15 @@ export function Navbar() {
     return (
         <nav className="flex items-center justify-center flex-wrap bg-sky-50 p-5 sticky top-0 bg-opacity-90 z-50 ">
             <span className="font-semibold text-xl">JANN</span>
-            <div className="flex justify-end right-5 absolute">
+            <div className="flex justify-end right-7 absolute gap-2">
                 <a
                     href="https://www.linkedin.com/in/joao-augustonn/"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 hover:text-sky-600 transition-all mr-4"
+                    className=" inline-block lg:mt-0 text-sky-800 hover:text-sky-600 transition-all  "
                 >
                     <LinkedInIcon />
                 </a>
                 <a href="https://github.com/jann712"
-                    className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 hover:text-sky-600 transition-all mr-4">
+                    className=" inline-block lg:mt-0 text-sky-800 hover:text-sky-600 transition-all">
                     <GitHubIcon />
                 </a>
             </div>
