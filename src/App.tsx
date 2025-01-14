@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 import { Navbar } from "./components/Navbar";
 import pfp from "./public/pfp.jpg"
 import { motion } from 'motion/react'
-import sky from "./public/sky.jpg"
+import sky from "./public/sky2.jpg"
 
 const technologies = [
   {
@@ -78,9 +78,9 @@ function App() {
       </div>
       <div className="flex justify-center flex-col  items-center h-dvh gap-12">
         <h2 className="text-4xl font-semibold">Essas são algumas das tecnologias que tenho familiaridade:</h2>
-        <motion.div className="flex gap-4" variants={{ whileInView: { transition: { staggerChildren: 0.5 } } }}>
-          {technologies.map((item) => (
-            <motion.div className="flex flex-col px-4 py-6 bg-zinc-50 h-48 shadow-lg rounded-md w-32 items-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} >
+        <motion.div className="flex gap-4">
+          {technologies.map((item, index) => (
+            <motion.div className="flex flex-col px-4 py-6 bg-zinc-50 h-48 shadow-lg rounded-md w-32 items-center" initial={{ opacity: 0, y:100 }} whileInView={{ opacity: 1, y: 0, transition: { delay: index/10} }} >
               <div className="h-3/4">{item.icon}</div>
               <div className="relative h-1/4 max-h-1/4  w-full">
                 <h2 className="truncate antialiased">{item.title}</h2>
@@ -89,16 +89,16 @@ function App() {
           ))}
         </motion.div>
       </div>
-      <div className="h-dvh flex justify-center items-center bg-green-50">
+      <div className="h-dvh flex justify-center items-center ">
         <div className="grid grid-cols-2  w-full lg:text-2xl items-center justify-center gap-6">
-          <div className="p-12 rounded-lg overflow-hidden flex">
-            <div className="w-1/2">
-            <img src={sky} alt="" className="w-full object-fill"/>
+          <div className="p-12 rounded-lg overflow-hidden flex justify-end">
+            <div className="w-1/2 h-full">
+            <img src={sky} alt="" className="w-full h-auto bg-contain shadow-xl rounded-md "/>
             </div>
           </div>
-          <div className="flex flex-col items-center text-md font-normal px-12 ">
-            <h3 className="text-3xl font-semibold">Objetivo</h3>
-            <span className="text-center  w-full text-3xl antialiased">
+          <div className="flex flex-col items-start text-md font-normal px-12 ">
+            {/* <h3 className="text-3xl font-medium">Objetivo</h3> */}
+            <span className="text-start  w-full text-4xl antialiased pr-36">
               Meu objetivo é desenvolver soluções que resolvam as situações propostas diante de mim,
               aprendendo ao longo do caminho.
             </span>
